@@ -1,0 +1,9 @@
+
+State Machine - |LJQ|keyboard:my_kb|stat
+Name stat.101 stat.100 stat.011 stat.010 stat.001 stat.000 
+stat.000 0 0 0 0 0 0 
+stat.001 0 0 0 0 1 1 
+stat.010 0 0 0 1 0 1 
+stat.011 0 0 1 0 0 1 
+stat.100 0 1 0 0 0 1 
+stat.101 1 0 0 0 0 1 

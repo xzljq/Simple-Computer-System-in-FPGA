@@ -1,0 +1,364 @@
+riscv32-unknown-elf-gcc -c -static -mcmodel=medany -fvisibility=hidden -Tsections.ld -nostdlib -nolibc -nostartfiles -Wall -Wextra -Wconversion -pedantic -Wcast-qual -Wcast-align -Wwrite-strings  main.c -o main.o
+main.c:77:5: warning: conflicting types for built-in function 'pow'; expected 'double(double,  double)' [-Wbuiltin-declaration-mismatch]
+   77 | int pow(int, int);
+      |     ^~~
+main.c:15:1: note: 'pow' is declared in header '<math.h>'
+   14 | #include "sys.h"
+  +++ |+#include <math.h>
+   15 | 
+main.c: In function 'main':
+main.c:197:17: warning: unused variable 'len' [-Wunused-variable]
+  197 |             int len = stringlen(instr);
+      |                 ^~~
+main.c: In function 'printHelp':
+main.c:225:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  225 |     putstr("hello\n");
+      |            ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:226:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  226 |     putstr("fib n\n");
+      |            ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:227:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  227 |     putstr("time\n");
+      |            ^~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:228:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  228 |     putstr("set time\n");
+      |            ^~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:229:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  229 |     putstr("cal\n");
+      |            ^~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:230:9: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  230 |  putstr("open/close led n\n");
+      |         ^~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:231:9: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  231 |  putstr("set seg n num\n");
+      |         ^~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'seTtime':
+main.c:239:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  239 |     putstr("please input hour, min, sec with space:");
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'putInt':
+main.c:276:5: warning: this 'if' clause does not guard... [-Wmisleading-indentation]
+  276 |     if(neg_flag)
+      |     ^~
+main.c:278:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the 'if'
+  278 |  putstr(p);
+      |  ^~~~~~
+main.c: In function 'calculator':
+main.c:365:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  365 |    putstr( "please input expressions:\n");
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:376:13: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  376 |      putstr("div zero error!\n");
+      |             ^~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:379:13: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  379 |      putstr("outcome:");
+      |             ^~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:386:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  386 |    putstr("functions:");
+      |           ^~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:392:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  392 |     putstr("no expressions\n");
+      |            ^~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:395:12: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  395 |     putstr("please input index:\n");
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:403:13: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  403 |      putstr("index outof range!\n");
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:406:13: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  406 |      putstr("index");
+      |             ^~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:408:13: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  408 |      putstr(" expression:");
+      |             ^~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:413:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  413 |    putstr("functions:");
+      |           ^~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:416:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  416 |    putstr("Error!\n");
+      |           ^~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:417:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  417 |    putstr("functions:");
+      |           ^~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'PrintHello':
+main.c:435:9: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  435 |  putstr("input 1 for cal, 2 to look up the history expressoins, q for quit\n");
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'ExpressCal':
+main.c:476:20:error: too many arguments to function 'CalNode'
+  476 |     Node outcome = CalNode(n1, n2, a[i].ch, div_flag);
+      |                    ^~~~~~~
+main.c:73:6: note: declared here
+   73 | Node CalNode(Node, Node, char);//✔
+      |      ^~~~~~~
+main.c: At top level:
+main.c:485:6: error: conflicting types for 'CalNode'
+  485 | Node CalNode(Node n1, Node n2, char ch, int* div_flag)//双目运算
+      |      ^~~~~~~
+main.c:73:6: note: previous declaration of 'CalNode' was here
+   73 | Node CalNode(Node, Node, char);//✔
+      |      ^~~~~~~
+main.c: In function 'ExpressChange':
+main.c:550:19: warning: variable 'k' set but not used [-Wunused-but-set-variable]
+  550 |    int in = 0, j, k, cnt = 0;//cnt计取了多少位
+      |                   ^
+main.c: In function 'CinJudge':
+main.c:663:45: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  663 |    (str[i + 1] == ' ' && (str[i + 2] >= '0' && str[i + 2] <= '9' || str[i + 2] == '.')
+      |                           ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+main.c:663:23: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  663 |    (str[i + 1] == ' ' && (str[i + 2] >= '0' && str[i + 2] <= '9' || str[i + 2] == '.')
+      |     ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+main.c:666:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  666 |    putstr("ERROR: space can't appear in the num!\n") ;
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:671:20: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  671 |   if (str[i] >= 33 && str[i] <= 39 || str[i] >= 58 && str[i] <= 93 || str[i] >= 107 && str[i] <= 113) {
+      |       ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+main.c:671:85: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  671 |   if (str[i] >= 33 && str[i] <= 39 || str[i] >= 58 && str[i] <= 93 || str[i] >= 107 && str[i] <= 113) {
+      |                                                                       ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~
+main.c:672:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  672 |    putstr("ERROR: illeagal character ");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:674:20: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  674 |             putstr("!\n");
+      |                    ^~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:682:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  682 |   putstr( "ERROR: ");
+      |           ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:684:16: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  684 |         putstr("match error!\n" );
+      |                ^~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:690:17: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  690 |         putstr( "ERROR: ");
+      |                 ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:692:16: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  692 |         putstr("match error!\n" );
+      |                ^~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:701:13: warning: conversion from 'int' to 'char' may change value [-Wconversion]
+  701 |    charPush(i);
+      |             ^
+main.c:705:21: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  705 |             putstr( "ERROR: match error!\n");
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:713:11: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  713 |   putstr( "ERROR: match error!\n");
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:712:7: warning: unused variable 'i' [-Wunused-variable]
+  712 |   int i = charTop();
+      |       ^
+main.c:722:21: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  722 |             putstr( "ERROR: ");
+      |                     ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:724:20: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  724 |             putstr("match error!\n" );
+      |                    ^~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:733:21: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  733 |             putstr( "ERROR: ");
+      |                     ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:735:20: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  735 |             putstr("match error!\n" );
+      |                    ^~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:746:21: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  746 |             putstr( "ERROR: ");
+      |                     ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:748:20: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  748 |             putstr("match error!\n" );
+      |                    ^~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:760:21: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  760 |             putstr( "ERROR: ");
+      |                     ^~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c:762:20: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  762 |             putstr("match error!\n" );
+      |                    ^~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'nodeTop':
+main.c:866:16: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  866 |         putstr("node stack error!");
+      |                ^~~~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'charTop':
+main.c:896:16: warning: passing argument 1 of 'putstr' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  896 |         putstr("char top error!");
+      |                ^~~~~~~~~~~~~~~~~
+In file included from main.c:14:
+sys.h:19:19: note: expected 'char *' but argument is of type 'const char *'
+   19 | void putstr(char *str);
+      |             ~~~~~~^~~
+main.c: In function 'CalNode':
+main.c:496:1: warning: control reaches end of non-void function [-Wreturn-type]
+  496 | }
+      | ^
+main.c: In function 'icp':
+main.c:604:1: warning: control reaches end of non-void function [-Wreturn-type]
+  604 | }
+      | ^
+main.c: In function 'isp':
+main.c:621:1: warning: control reaches end of non-void function [-Wreturn-type]
+  621 | }
+      | ^
+main.c: In function 'nodeTop':
+main.c:868:1: warning: control reaches end of non-void function [-Wreturn-type]
+  868 | }
+      | ^
+main.c: In function 'charTop':
+main.c:898:1: warning: control reaches end of non-void function [-Wreturn-type]
+  898 | }
+      | ^
+Makefile:18: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
